@@ -5,19 +5,6 @@ Pytorch Implementation of "R2CNN Rotational Region CNN for Orientation Robust Sc
 
 Check [INSTALL.md](INSTALL.md) for installation instructions.
 
-## Inference on ICDAR 2015 dataset
-**1. Download model [R2CNN_R50_ICDAR2015](https://drive.google.com/open?id=1sXI00SG3VdwWWZLP6ZaBxvqph77oackI)**
-
-**2. single image inference**
-````
-cd ./tools
-python inference_engine.py
-````
-
-![01](tools/ICDAR2015/img_14.jpg)
-![02](tools/ICDAR2015/img_60.jpg)
-![03](tools/ICDAR2015/img_108.jpg)
-
 ## Perform training on ICDAR2015 dataset
 **1. Download [icdar2015](https://rrc.cvc.uab.es/?ch=4&com=downloads) dataset and pretrain model from maskrcnn-bencmark**
 ````
@@ -39,6 +26,26 @@ cd ./tools
 python train_net.py 
 ````
 
+## Inference on ICDAR 2015 dataset
+**1. Download model or use your own model** 
+
+**2. single image inference**
+````
+cd ./tools
+python inference_engine.py
+````
+
+![01](tools/ICDAR2015/img_14.jpg)
+![02](tools/ICDAR2015/img_60.jpg)
+![03](tools/ICDAR2015/img_108.jpg)
+
+
+
+
+## New feature compared with maskrcnn-benchmark
+- new data structure quad_bbox(x1, y1, x2, y2, x3, y3, x4, y4) is defined to replace bbox(x1, y1, x2, y2)
+- an extra branch in box_head which regress offsets of 4 points
+- post processor of rpn is adjusted to detect text objects
 ## TODO
 - [x] 
 
