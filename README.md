@@ -27,7 +27,7 @@ python train_net.py
 ````
 
 ## Inference on ICDAR 2015 dataset
-**1. Download model or use your own model** 
+**1. Download [model](https://drive.google.com/file/d/1eIJ7nl0Ei_yn3S7dDXNIhMy3BcZ48VYp/view?usp=sharing) or use your own model** 
 
 **2. single image inference**
 ````

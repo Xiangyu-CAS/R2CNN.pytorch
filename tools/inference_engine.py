@@ -214,7 +214,7 @@ if __name__ == '__main__':
     test_img_dir = 'datasets/ICDAR2015/test/images'
     out_dir = 'datasets/ICDAR2015/results'
     config_file = '../configs/e2e_r2cnn_R_50_FPN_1x.yaml'
-    weights = 'model_0072500.pth'
+    weights = 'model_final.pth'
     img_lists = os.listdir(test_img_dir)
     cfg.merge_from_file(config_file)
     detector = inference_engine(cfg, weights)
